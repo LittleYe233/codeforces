@@ -17,7 +17,7 @@
                 "-std=c++11", // 要用的语言标准，根据自己的需要修改。c++可用c++14
                 "-static",
                 "-pipe",
-                "-O2",
+                // "-O2",
             ], // 编译的命令，其实相当于VSC帮你在终端中输了这些东西
             "type": "process", // process是把预定义变量和转义解析后直接全部传给command；shell相当于先打开shell再输入命令，所以args还会经过shell再解析一遍
             "group": {
