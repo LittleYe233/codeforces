@@ -20,6 +20,7 @@
     "files.associations": {
         "*.html": "html",
         "*.origin": "plaintext",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     }, // 格式化时调整include的顺序（按字母排序）
 }
