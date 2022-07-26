@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.defaultLanguage": "c++",
+		"platformSettings.autoLoad": true,
+		"platformSettings.platforms": {
+			"win32": {
+				"code-runner.executorMap": {
+					"c": "gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -std=gnu11 -static -g -O2 -lm && &'./$fileNameWithoutExt.exe'",
+					"cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -std=gnu++17 -static -g -O2 && &'./$fileNameWithoutExt.exe'"
+				},
+			},
+			"linux": {
+				"code-runner.executorMap": {
+					"c": "gcc '$fileName' -o '$fileNameWithoutExt' -Wall -std=gnu11 -static -g -O2 -lm && &'./$fileNameWithoutExt'",
+					"cpp": "g++ '$fileName' -o '$fileNameWithoutExt' -Wall -std=gnu++17 -static -g -O2 && &'./$fileNameWithoutExt'"
+				},
+			}
+		},
+		"files.associations": {
+			"*.html": "html",
+			"*.origin": "plaintext",
+			"iostream": "cpp"
+		}
+	}
+}
