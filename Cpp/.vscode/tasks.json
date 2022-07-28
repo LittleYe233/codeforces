@@ -12,7 +12,7 @@
                 "-Wall",
                 "-std=gnu++17",
                 "-static",
-                "-O2"
+                // "-O2"
             ],
             "type": "process",
             "group": "build",
