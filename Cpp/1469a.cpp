@@ -3,33 +3,6 @@
 
 using namespace std;
 
-bool judge(string s)
-{
-    int score = 0, l = s.length(), ll = l / 2;
-
-    if (l % 2)
-    {
-        return false;
-    }
-
-    for (int i = 0; i < l; ++i)
-    {
-        if (s[i] == '(')
-        {
-            ++score;
-        }
-        else if (s[i] == ')')
-        {
-            --score;
-        }
-        if (score < 0 || score > ll)
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
 
 int main()
 {
@@ -41,7 +14,14 @@ int main()
     for (int i = 0; i < t; ++i)
     {
         cin >> s;
-        cout << (judge(s) ? "YES" : "NO") << endl;
+        if (s.length() % 2 == 0 && s[0] != ')' && s[s.length() - 1] != '(')
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
 
     return 0;
