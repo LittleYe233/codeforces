@@ -32,7 +32,6 @@
         },
         {
             "name": "Linux",
-            // `g++ temp.cpp -o /dev/null -Wall -O2 -static -std=gnu++17 -g -v`
             "includePath": [
                 "${default}",
                 "${workspaceRoot}",
@@ -59,7 +58,8 @@
                 "-std=gnu++17",
                 "-static",
                 "-O2"
-            ]
+            ],
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4
