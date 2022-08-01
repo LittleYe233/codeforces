@@ -12,6 +12,7 @@
                 "-Wall",
                 "-std=gnu++17",
                 "-static",
+                "-DDEBUG",
                 // "-O2"
             ],
             "type": "process",
