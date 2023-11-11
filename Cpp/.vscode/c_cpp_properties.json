@@ -23,12 +23,14 @@
             "intelliSenseMode": "windows-gcc-x64",
             "compilerArgs": [
                 "-Wall",
+                "-Wextra",
+                "-Wconversion",
                 "-g",
-                "-std=c++11",
+                "-std=c++17",
                 "-static",
-                "-pipe",
                 "-O2",
-                "-DDEBUG"
+                "-DDEBUG",
+                "-Wl,-z,stack-size=268435456"
             ]
         },
         {
@@ -36,12 +38,12 @@
             "includePath": [
                 "${default}",
                 "${workspaceRoot}",
-                "/usr/include/c++/12.1.0",
-                "/usr/include/c++/12.1.0/x86_64-pc-linux-gnu",
-                "/usr/include/c++/12.1.0/backward",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include",
+                "/usr/include/c++/13.2.1",
+                "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu",
+                "/usr/include/c++/13.2.1/backward",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include",
                 "/usr/local/include",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed",
                 "/usr/include"
             ],
             "defines": [
@@ -55,11 +57,14 @@
             "intelliSenseMode": "linux-gcc-x64",
             "compilerArgs": [
                 "-Wall",
+                "-Wextra",
+                "-Wconversion",
                 "-g",
-                "-std=gnu++17",
+                "-std=c++17",
                 "-static",
                 "-O2",
-                "-DDEBUG"
+                "-DDEBUG",
+                "-Wl,-z,stack-size=268435456"
             ],
             "configurationProvider": "ms-vscode.makefile-tools"
         }

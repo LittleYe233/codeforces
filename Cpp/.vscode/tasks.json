@@ -5,15 +5,18 @@
             "label": "Compile",
             "command": "g++",
             "args": [
-                "${file}",
+                "-Wall",
+                "-Wextra",
+                "-Wconversion",
+                "-g",
+                "-std=c++17",
+                "-static",
+                // "-O2",
+                "-DDEBUG",
+                "-Wl,-z,stack-size=268435456",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.o",
-                "-g",
-                "-Wall",
-                "-std=gnu++17",
-                "-static",
-                "-DDEBUG",
-                // "-O2"
+                "${file}"
             ],
             "type": "process",
             "group": "build",
@@ -22,8 +25,7 @@
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared"
-            },
-            "problemMatcher": "$gcc"
+            }
         }
     ]
 }
