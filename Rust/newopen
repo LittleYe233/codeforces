@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # flags
 pre_flags() {
@@ -18,6 +18,7 @@ handle_paths() {
     olddir=$(pwd)
     rootdir=$(dirname "$0")
     pkgpath="$1"
+    problemno=$(echo ${pkgpath^^} | cut -b 2-)
     pkgdir=$(dirname "$pkgpath")
     pkgbase=$(basename "$pkgpath")
     codeworkspacefile="${pkgbase}.code-workspace"
@@ -76,16 +77,16 @@ EOF
 }
 EOF
 
-#     ## create useful utilites
-#     cat <<EOF > autogit
-# #!/bin/sh
-#
-# cd $(dirname "$0")
-#
-# git add .
-# git commit -m "chore(\$(basename \$(realpath .))): update at \$(date +"%Y-%m-%dT%H:%M:%SZ%:z")"
-# EOF
-#     chmod +x ./autogit
+    ## create useful utilites
+    cat <<EOF > autogit
+#!/bin/sh
+
+cd $(dirname "$0")
+
+git add .
+git commit -m "${problemno}: Complete Rust AC"
+EOF
+    chmod +x ./autogit
 
     ## code template
     cat <<EOF > src/main.rs
